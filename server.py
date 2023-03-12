@@ -24,6 +24,9 @@ def place_order():
     
     # Assigning the sum of each fruit to session['total] to render using Jinja syntax in our html page
     session['total'] = int(request.form['strawberry']) + int(request.form['raspberry']) + int(request.form['apple'])
+    
+    #  Printing out this message on the terminal 
+    print(f"Charging {session['name']} for {session['total']} fruits")
     return redirect('/order')
 
 @app.route('/order')
