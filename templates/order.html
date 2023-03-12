@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style2.css') }}">
+    <title>Completed Order</title>
+</head>
+<body>
+    <div class="mainFrame">
+        <div>
+            <h3>Thank you for your order!</h3>
+            <br>
+            <p>We ordered {{ session['total'] }} items for you and charged your <br> student account on {{ date_time }} </p>
+        </div>
+        <br>
+        <h3>You've ordered</h3>
+        <!-- Creating table to input our fruit data -->
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Fruit Name</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Strawberry</td>
+                    <td>{{ session['strawberry'] }}</td>
+                </tr>
+                <tr>
+                    <td>Raspberry</td>
+                    <td>{{ session['raspberry'] }}</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>{{ session['apple'] }}</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="info">
+            <p class="info_label">Your Information</p>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td>{{ session['name'] }}</td>
+                </tr>
+                <tr>
+                    <td>Your Student ID:</td>
+                    <td>{{ session['id'] }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

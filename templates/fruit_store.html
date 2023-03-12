@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Fruit Store Homepage</title>
+</head>
+<body>
+    <!-- Main frame -->
+    <div class="mainFrame">
+        <!-- this Div serves as the left information container -->
+        <div class="leftFrame">
+            <h2>Welcome to the Dojo's Fruit Store!</h2>
+            
+            <!-- Shopping options -->
+            <div class="fruit_table">
+                <h5>What would you like to buy?</h5>
+                <form action="/place_order" method="POST">
+                <table>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                            <td>Strawberry</td>
+                            <td>
+                                <select name="strawberry">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rapsberry</td>
+                            <td>
+                                <select name="raspberry">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>
+                                <select name="apple">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                    <hr>
+                    <!-- Customer's information -->
+                    <div class="customer_info">
+                        <h5>Your Information</h5>
+                        <label>Name:</label>
+                        <input name="name" class="name_input">
+                        <br>
+                        <label>Your Student ID:</label>
+                        <input name="id" class="id_input">
+                        <br>
+                        <button type="submit">Buy the goods!</button>
+                    </div>
+                </form>
+        </div>
+        <div class="rightFrame">
+            <p class="header_message">🍓🍏 Welcome to the Dojo Fruite Store! 🍏🍓</p>
+            <div class="inner_message">
+                <p>Your dojo decided to buy fruits for all the students! Please use this app to tell us what you would like to have! once we get your order, we'll chrge your student account automatically. </p>
+                <p> Dojo Fruit Store is proudly built using Flask.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
